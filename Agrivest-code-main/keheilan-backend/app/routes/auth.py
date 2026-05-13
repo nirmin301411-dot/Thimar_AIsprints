@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify, session
+from flask import Blueprint, request, jsonify, session, render_template
 from app import db
 from app.models.user import User
 
@@ -135,5 +135,6 @@ def me():
 
 
 @auth_bp.route("/")
-def welcome():
-    return "The server is working perfectly!"
+def home():
+    # This looks into the 'templates' folder for your index.html
+    return render_template("index.html")
