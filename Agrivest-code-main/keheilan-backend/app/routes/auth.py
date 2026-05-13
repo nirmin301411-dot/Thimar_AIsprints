@@ -2,7 +2,8 @@ from flask import Blueprint, request, jsonify, session, render_template
 from app import db
 from app.models.user import User
 
-auth_bp = Blueprint("auth_bp", __name__)
+# The '../' tells Flask to go UP one folder to find the templates
+auth_bp = Blueprint('auth_bp', __name__, template_folder='../../templates')
 
 VALID_ROLES = {"investor", "farmer", "admin"}
 
