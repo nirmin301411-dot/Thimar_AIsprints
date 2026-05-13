@@ -1,0 +1,44 @@
+# =============================================================================
+# requirements.txt
+# Python dependencies for the Keheilan Flask prototype.
+# Install with: pip install -r requirements.txt
+# =============================================================================
+
+# Web framework
+Flask==3.1.3
+
+# SQLAlchemy ORM integration for Flask
+Flask-SQLAlchemy==3.1.1
+
+# Database migration tool (Alembic wrapper for Flask)
+Flask-Migrate==4.1.0
+
+# Cross-Origin Resource Sharing — allows frontend to call the API
+Flask-Cors==6.0.2
+
+# Server-side session support
+Flask-Session==0.8.0
+
+# PostgreSQL adapter — binary version requires no system dependencies
+psycopg2-binary==2.9.10
+
+# Google Gemini AI SDK (new package) — used for all 8 text-based AI features
+# (risk profiler, deal ranker, deal explainer, portfolio narrator,
+#  text rewriter, viability checker, anomaly detector, in-app helper)
+# NOTE: google-generativeai is deprecated — use google-genai instead
+google-genai>=1.0.0
+
+# Groq SDK — used for Whisper voice transcription (free tier, fast inference)
+groq>=0.9.0
+
+# AWS SDK — for uploading farm photos to S3
+boto3==1.38.0
+
+# HTTP client — for calling N8N webhooks and external services
+requests==2.32.3
+
+# Loads .env file into environment variables
+python-dotenv==1.2.2
+
+# Production WSGI server for Railway deployment
+gunicorn==21.2.0
