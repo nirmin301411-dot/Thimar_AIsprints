@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify, session
 from app import db
 from app.models.user import User
 
-auth_bp = Blueprint("auth_bp", __name__, url_prefix="/auth")
+auth_bp = Blueprint("auth_bp", __name__)
 
 VALID_ROLES = {"investor", "farmer", "admin"}
 
@@ -134,6 +134,6 @@ def me():
     return jsonify(user.to_dict()), 200
 
 
-@auth_bp.route('/')
+@app.route('/')
 def welcome():
     return "The server is working perfectly!"
