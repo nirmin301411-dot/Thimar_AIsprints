@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify, session
 from app import db
 from app.models.user import User
 
-auth_bp = Blueprint("auth_bp", __name__)
+auth_bp = Blueprint("auth_bp", __name__, url_prefix="/auth")
 
 VALID_ROLES = {"investor", "farmer", "admin"}
 
