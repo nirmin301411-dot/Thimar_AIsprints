@@ -132,3 +132,8 @@ def me():
         return jsonify({"error": "User not found"}), 404
 
     return jsonify(user.to_dict()), 200
+
+
+@auth_bp.route('/')
+def welcome():
+    return "The server is working perfectly!"
