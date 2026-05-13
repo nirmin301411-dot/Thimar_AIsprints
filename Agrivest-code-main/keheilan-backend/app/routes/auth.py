@@ -134,6 +134,6 @@ def me():
     return jsonify(user.to_dict()), 200
 
 
-@app.route('/')
+@auth_bp.route("/")
 def welcome():
     return "The server is working perfectly!"
